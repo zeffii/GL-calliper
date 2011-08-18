@@ -205,16 +205,6 @@ def draw_dimensions(region, rv3d, context, tetra_coords):
     screen_base1 = loc3d2d(region, rv3d, base1) 
     screen_base2 = loc3d2d(region, rv3d, base2)
     screen_base3 = loc3d2d(region, rv3d, base3)
-    # another 8.
-    # [x] 1 scr_base3_ext_y
-    # [x] 2 scr_base2_ext_y
-    # [x] 3 scr_base2_ext_x
-    # [x] 4 scr_base1_ext_x
-    # [x] 5 scr_apex_ext_y
-    # [x] 6 scr_base1_ext_y
-    # [x] 7 scr_liner_top
-    # [x] 8 scr_liner_bottom
-
     
     # DRAW X  
     if base3.y > apex.y:
@@ -342,12 +332,6 @@ def draw_tris(region, rv3d, context):
         return coordlist
     
     def get_angle_rad(set_of_coords):
-        # angle1_rad = (coord3-coord1).angle(coord2-coord1)
-        # angle2_rad = (coord1-coord2).angle(coord3-coord2)
-        # angle3_rad = (coord2-coord3).angle(coord1-coord3)
-        # angle1_deg = degrees(angle1_rad)
-        # angle2_deg = degrees(angle2_rad)
-        # angle3_deg = degrees(angle3_rad)
         coord1, coord2, coord3 = set_of_coords
         angle_rad = (coord1-coord2).angle(coord3-coord2)
         angle_deg = degrees(angle_rad)
