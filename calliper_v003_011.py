@@ -18,6 +18,8 @@ Axis mode displays axis lines using an openGL overlay
 Dimensions mode will display (at a later stage) the dimensions lines as per 
 engineering conventions.
 
+Script also displays the angular spread of 3 selected empties.
+
 [todo]  make real
 [todo]  store set
 
