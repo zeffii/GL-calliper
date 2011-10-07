@@ -63,13 +63,12 @@ def get_distance(names_of_empties):
 
 
 def get_distance_from_context(context):
-    distance = get_distance(get_objects(context))
-    return distance
-
+    return get_distance(get_objects(context))
+    # no assignment needed
 
 def get_coordinates_from_empties(object_list):
-    coordlist = [obj.location for obj in object_list]
-    return coordlist
+    return [obj.location for obj in object_list]
+    # return coordlist
 
 
 def get_difference(axis, coord):
